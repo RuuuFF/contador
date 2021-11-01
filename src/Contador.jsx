@@ -1,6 +1,10 @@
 import { useState } from 'react';
 import './Contador.css'
 
+import CountNumber from './components/CountNumber'
+import GapInput from './components/GapInput'
+import Buttons from './components/Buttons'
+
 const Contador = props => {
   const [ number, setNumber ] = useState(props.number || 0)
   const [ gap, setGap ] = useState(props.gap || 5)
@@ -24,27 +28,11 @@ const Contador = props => {
     <div className="container">
       <div className="counter-container">
         <h1>Contador</h1>
-        <p>{ number }</p>
-        
-        <div className="input-container">
-          <div className="input-field">
-            <label htmlFor="gap">GAP:</label>
-            <input value={gap} type="text" onChange={changeGap} />
-          </div>
-
-          <div className="input-buttons-container">
-            <button onClick={incGap}>+</button>
-            <button onClick={decGap}>-</button>
-          </div>
-        </div>
-
-        <div className="buttons-container">
-          <button onClick={decNum}>-</button>
-          <button onClick={incNum}>+</button>
-        </div>
+        <CountNumber number={number} />        
+        <GapInput counter={{ gap, changeGap, incGap, decGap }} />
+        <Buttons counter={{ incNum, decNum }} />
       </div>
     </div>
-    
   );
 }
 
