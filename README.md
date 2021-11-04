@@ -12,5 +12,5 @@ Utilizando conhecimentos que adquiri no curso de <a href="https://www.udemy.com/
 
 <div align="center">
   <img alt="Contador" src="https://i.imgur.com/9NuZdR3.png" width="450px">
-  <p>Confira o resultado: <a href="https://contador-react-ruuuff.netlify.app/">Contador</a></p>
+  <p>Confira o resultado: <a href="https://counter-ruuuff.netlify.app/">Contador</a></p>
 </div>
